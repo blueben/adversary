@@ -8,6 +8,7 @@
   "sandbox": {
     "enabled": true,
     "failIfUnavailable": true,
+    "strictAllowlist": true,
     "filesystem": {
       "denyWrite": ["/"]
     }
