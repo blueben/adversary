@@ -6,7 +6,7 @@ CLAUDE.md contains the instructions for the adversary role.
 
 ## Setup
 
-1. git clone https://github.com/blueben/adversary.git
+1. ```git clone https://github.com/blueben/adversary.git```
 2. ```cd adversary```
 3. Run ```claude --settings adversary-settings.json```
 4. Accept the Trust prompt
