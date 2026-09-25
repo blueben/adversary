@@ -10,7 +10,8 @@ CLAUDE.md contains the instructions for the adversary role.
 2. ```cd adversary```
 3. Run ```claude --settings adversary-settings.json```
 4. Accept the Trust prompt
-5. Let the session idle
+5. Select the model you wish to use.
+6. Let the session idle
 
 ## Use
 
