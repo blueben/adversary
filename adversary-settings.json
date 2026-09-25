@@ -4,6 +4,7 @@
     "deny": ["Write", "Edit", "NotebookEdit"]
   },
   "crossSessionInbound": "accept",
+  "autoMemoryEnabled": false,
   "sandbox": {
     "enabled": true,
     "failIfUnavailable": true,
