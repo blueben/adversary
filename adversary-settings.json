@@ -1,6 +1,14 @@
 {
   "permissions": {
-    "defaultMode": "plan"
+    "defaultMode": "plan",
+    "deny": ["Write", "Edit", "NotebookEdit"]
   },
-  "crossSessionInbound": "accept"
+  "crossSessionInbound": "accept",
+  "sandbox": {
+    "enabled": true,
+    "failIfUnavailable": true,
+    "filesystem": {
+      "denyWrite": ["/"]
+    }
+  }
 }
