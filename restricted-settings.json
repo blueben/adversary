@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "deny": [
+      "Bash",
+      "WebFetch",
+      "WebSearch"
+    ]
+  },
+  "allowedMcpServers": [],
+  "isolatePeerMachines": true,
+  "sandbox": {
+    "allowUnsandboxedCommands": false,
+    "network": {
+      "allowedDomains": [],
+      "strictAllowlist": true
+    }
+  }
+}
