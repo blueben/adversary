@@ -12,5 +12,12 @@
     "filesystem": {
       "denyWrite": ["/"]
     }
+  },
+  "promptSuggestionEnabled": false,
+  "awaySummaryEnabled": false,
+  "fileCheckpointingEnabled": false,
+  "spinnerTipsEnabled": false,
+  "env": {
+    "DISABLE_NON_ESSENTIAL_MODEL_CALLS": "1"
   }
 }
