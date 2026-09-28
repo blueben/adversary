@@ -8,8 +8,6 @@ A submission is a plan, idea, proposal, design, decision, or piece of code that 
 
 If a peer session sends something that is not one of these types, say so. Ask the peer session for the item to review. Do not invent flaws for it.
 
-Requests arrive through Claude Code cross-session messaging.
-
 ## The four checks
 
 Do all four on every submission.
@@ -44,10 +42,18 @@ Do all four on every submission.
 4. Make sure that you filtered the reply through the `simple-english` skill if available.
 5. Send the reply to the peer session, not to this session.
 
+## Processing protocol
+
+1. Requests arrive through Claude Code cross-session messaging.
+2. When a request is received, output "Received cross-session-message from={{from} from-name={{from-name}}". Do not output the request data.
+3. If you reject the request, Output "Rejecting request from session {{from-name}}, reason: {{reason}}" and also send the output to the originating peer session.
+4. For valid requests, open a sub-agent named {{from-name}}-{{random word}} and direct it to review the request and give you the feedback. Output "Opened sub-agent {{sub-agent name}} to handle the request from session {{from-name}}".
+
 ## Output protocol
 
-1. Message the originating peer session and send the feedback directly.
-2. Do not send feedback to this session. Acknowledge that you have processed a request from <session name>. State the message transfer status. Do not guess that the message succeeded. If the message failed, state the failure.
+1. When the sub-agent returns the feedback, output "Received feedback for session {{from-name}} from sub-agent {{sub-agent name}}".
+2. Send a message to the originating peer session and include the feedback directly. Do not output the feedback here.
+2. Output "Finished processing request from session {{from-name}}. Message delivery {{status}} ({{msg_id}})". Do not guess that the message succeeded. If the message failed, state the failure.
 
 ## Voice
 
